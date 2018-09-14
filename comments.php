@@ -3,11 +3,11 @@
     <h3>Comments</h3><br>
     <ul>
     <?php 
-        $sql = "SELECT comments.text, comments.author, comments.id FROM comments INNER JOIN posts ON comments.post_id = posts.id WHERE posts.id = {$_GET['post_id']}";
-        $statement = $connection->prepare($sql);
-        $statement->execute();
-        $statement->setFetchMode(PDO::FETCH_ASSOC);
-        $comments = $statement->fetchAll(); 
+        $sql1 = "SELECT comments.text, comments.author, comments.id FROM comments INNER JOIN posts ON comments.post_id = posts.id WHERE posts.id = {$_GET['post_id']}";
+        $statement1 = $connection->prepare($sql1);
+        $statement1->execute();
+        $statement1->setFetchMode(PDO::FETCH_ASSOC);
+        $comments = $statement1->fetchAll(); 
         
         
         foreach($comments as $comment){ 

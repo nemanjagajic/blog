@@ -13,5 +13,5 @@
         $statement4 = $connection->prepare($sql4);
         $statement4->execute();
 
-        header('Location: posts.php');
+        header('Location: index.php');
     }
